@@ -85,4 +85,5 @@ window.removeFromCart = function(productId) {
 window.checkout = function() {
     // Implement checkout logic here
     alert('Checkout functionality to be implemented');
-}; 
+};
+

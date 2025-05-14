@@ -42,16 +42,26 @@ export function getCurrentUser() {
 
 // Register function
 export async function register({ email, fullName, phoneNumber, password, confirmPassword, fullAddress }) {
-    return apiRequest('/api/Account/Register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            email,
-            fullName,
-            phoneNumber,
-            password,
-            confirmPassword,
-            fullAddress
-        })
-    });
+    try {
+        const response = await apiRequest('/api/Account/Register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email,
+                fullName,
+                phoneNumber,
+                password,
+                confirmPassword,
+                fullAddress
+            })
+        });
+        console.log("response");
+        console.log(response);
+        return response;
+    } catch (error) {
+        if (error.message.includes('400')) {
+            throw new Error('Registration failed. Please check your input and try again.');
+        }
+        throw error;
+    }
 }

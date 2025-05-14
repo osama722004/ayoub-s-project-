@@ -70,11 +70,22 @@ function loadUserFromStorage() {
 // Render layout
 function renderLayout() {
   const user = getState().user;
-  document.querySelector("header").innerHTML = `
+  const currentPage = getState().currentPage;
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  if (currentPage === "login" || currentPage === "register") {
+    header.innerHTML = "";
+    header.style.display = "none";
+    if (footer) footer.style.display = "none";
+  } else {
+    header.innerHTML = `
     <nav>
       ${renderNavbar(user)}
     </nav>
   `;
+    header.style.display = "";
+    if (footer) footer.style.display = "";
+  }
 }
 
 // Main page rendering dispatcher

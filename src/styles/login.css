@@ -1,0 +1,193 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Wrapper */
+.login-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Left Section */
+.login-left {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.login-form {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Input Group with Icon */
+.input-icon {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.input-icon input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.icon-email::before { content: "✉️"; margin-right: 8px; }
+.icon-password::before { content: "🔒"; margin-right: 8px; }
+.icon-eye::before {
+  content: "👁️";
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Form options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #9b8a76;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #7c6a58;
+}
+
+/* Sign-up link */
+.signup-link {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+.signup-link a {
+  color: #444;
+  text-decoration: underline;
+}
+
+/* Right Section */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+
+.login-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .login-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    flex: none;
+  }
+
+  .login-left {
+    padding: 30px 16px;
+  }
+
+  .login-form {
+    padding: 24px 16px;
+  }
+
+  .login-right {
+    height: 260px;
+  }
+
+  .login-right img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .login-left h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left {
+    padding: 20px 12px;
+  }
+
+  .login-form {
+    padding: 20px 12px;
+  }
+
+  .login-left h1 {
+    font-size: 1.4rem;
+  }
+
+  .login-btn {
+    font-size: 1rem;
+  }
+
+  .signup-link {
+    font-size: 0.9rem;
+  }
+}

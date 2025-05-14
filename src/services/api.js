@@ -10,6 +10,8 @@ export async function apiRequest(url, options = {}) {
   } catch {
     data = null;
   }
+  console.log('Response Status:', response.status);
+  console.log('Response Body:', data);
   if (!response.ok) {
     throw new Error((data && data.message) || "API request failed");
   }

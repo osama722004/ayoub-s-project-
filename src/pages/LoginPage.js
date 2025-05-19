@@ -1,20 +1,18 @@
 export default function renderLoginPage() {
   return `
-    <div class="login-wrapper">
+    <div class="login-wrapper" id="login-page">
       <div class="login-left">
         <h1>login to Promotex</h1>
         <form id="login-form" class="login-form">
           <div class="form-group">
             <label for="email">E-mail</label>
             <div class="input-icon">
-              <span class="icon-email"></span>
-              <input type="email" id="email" required placeholder="Enter you e-mail">
+              <input type="email" id="email" required placeholder="Enter your e-mail">
             </div>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
             <div class="input-icon">
-              <span class="icon-password"></span>
               <input type="password" id="password" required placeholder="Enter your password">
               <span class="icon-eye"></span>
             </div>
@@ -33,7 +31,7 @@ export default function renderLoginPage() {
         </div>
       </div>
       <div class="login-right">
-        <img src="https://images.pexels.com/photos/5322202/pexels-photo-5322202.jpeg" alt="Fashion Model" />
+        <img src="../src/Assets/photo.jpg" alt="Fashion Model" />
       </div>
     </div>
   `;

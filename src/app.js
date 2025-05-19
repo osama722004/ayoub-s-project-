@@ -169,3 +169,6 @@ function handleLogout() {
 function updateNavigation() {
   renderLayout(); // Re-render Navbar on state change
 }
+
+
+// ///////////////////////////////////////////////////////////////

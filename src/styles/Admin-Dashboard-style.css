@@ -1,0 +1,161 @@
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #f0eae2;
+  border-right: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 150px; /* يمكنك تعديل الحجم */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+.sidebar li.active {
+  background: #e0dad2;
+  border: 1px solid #818181;
+  font-weight: bold;
+ 
+}
+.sidebar li:hover{
+  background: #e0dad2;
+  border: 1px solid #818181;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+thead {
+  background: #e9e1d7;
+  color: #998A78;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody td:nth-child(3) {
+  font-weight: bold;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.accept {
+  background: #000;
+  color: white;
+}
+.block {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.reject {
+  background: white;
+  color: red;
+  border: 1px solid red;
+}
+.table-container {
+  max-height: 85vh; /* أو أي ارتفاع يناسبك */
+  overflow-y: auto;
+  border: 1px solid #eee;
+}
+
+/* ثبّت رؤوس الأعمدة */
+.table-container thead th {
+  position: sticky;
+  top: 0;
+  background: #e9e1d7;
+  z-index: 1;
+}
+.addproduct{
+    margin-right: 50px;
+  background-image: linear-gradient(to right, #8f7863, #a78b74);
+    color: #fff;
+    width: 186px;
+    height: 60px;
+    font-size: 20px;
+}
+.addproduct:hover{
+     background-image: linear-gradient(to right, #a78b74, #998A78);
+}
+.addproduct i {
+    margin-right: 5px;
+    /* font-size: 20px; */
+}
+
+
